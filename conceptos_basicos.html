@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/png" href="C:\Users\Daniel\OneDrive\Escritorio\Codigo\Html\ia\fotos\simbolo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptos Básicos de Python</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="poo.html">Clases y Funciones en Python</a></li>
+                <li><a href="ejercicios.html">Ejercicios</a></li>
+            </ul>
+        </nav>
+        <h1>Conceptos Básicos de Python</h1>
+        <nav>
+            <ul>
+                <li><a href="#variables">Variable</a></li>
+                <li><a href="#bucles">Bucles</a></li>
+                <li><a href="#estamentos">Estamentos</a></li>
+                <li><a href="#operadores">Operadores</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="variables">
+            <h2>Variables</h2>
+            <p>En Python, una variable es un contenedor para almacenar datos. Se puede pensar en una variable como un etiqueta asociada a un valor en la memoria.</p>
+            <p>Ejemplo:</p>
+            <pre><code class="python">
+# Declaración de variables
+nombre = "Juan"
+edad = 25
+
+# Uso de variables
+print("Hola,", nombre)
+print("Tienes", edad, "años")
+            </code></pre>
+            <h3>Tipos de Variables</h3>
+            <table>
+                <tr>
+                    <th>Tipo de Variable</th>
+                    <th>Ejemplo</th>
+                    <th>Descripción</th>
+                </tr>
+                <tr>
+                    <td>Entero (int)</td>
+                    <td>edad = 25</td>
+                    <td>Se utiliza para representar números enteros.</td>
+                </tr>
+                <tr>
+                    <td>Flotante (float)</td>
+                    <td>altura = 1.75</td>
+                    <td>Se utiliza para representar números decimales.</td>
+                </tr>
+                <tr>
+                    <td>Cadena (str)</td>
+                    <td>nombre = "Juan"</td>
+                    <td>Se utiliza para representar texto.</td>
+                </tr>
+                <tr>
+                    <td>Booleano (bool)</td>
+                    <td>es_mayor_de_edad = True</td>
+                    <td>Se utiliza para representar valores de verdad.</td>
+                </tr>
+                <tr>
+                    <td>Lista (list)</td>
+                    <td>numeros = [1, 2, 3, 4, 5]</td>
+                    <td>Se utiliza para almacenar una colección ordenada de elementos.</td>
+                </tr>
+                <tr>
+                    <td>Tupla (tuple)</td>
+                    <td>colores = ("rojo", "verde", "azul")</td>
+                    <td>Es similar a una lista pero es inmutable.</td>
+                </tr>
+                <tr>
+                    <td>Diccionario (dict)</td>
+                    <td>persona = {"nombre": "Juan", "edad": 25}</td>
+                    <td>Se utiliza para almacenar pares clave-valor.</td>
+                </tr>
+            </table>
+        </section>
+<section id="bucles">
+    <h2>Bucles</h2>
+    <p>Los bucles se utilizan para iterar sobre una secuencia de elementos, como una lista o una cadena, y realizar una acción repetida.</p>
+    <p>En Python, los bucles más comunes son el bucle <code>for</code> y el bucle <code>while</code>.</p>
+    <p>Ejemplo:</p>
+    <pre><code class="python">
+# Bucle for
+for i in range(5):
+    print(i)
+
+# Bucle while
+contador = 0
+while contador < 5:
+    print(contador)
+    contador += 1
+    </code></pre>
+</section>
+<section id="estamentos">
+    <h2>Estamentos de Control</h2>
+    <p>Los estamentos de control se utilizan para alterar el flujo de ejecución del programa.</p>
+    <p>Algunos estamentos de control en Python incluyen <code>if</code>, <code>elif</code> y <code>else</code>.</p>
+    <p>Ejemplo:</p>
+    <pre><code class="python">
+# Estamento if
+x = 10
+if x > 0:
+    print("x es positivo")
+elif x == 0:
+    print("x es cero")
+else:
+    print("x es negativo")
+    </code></pre>
+</section>
+<section id="operadores">
+  <h2>Operadores</h2>
+  <p>Los operadores en Python son símbolos o palabras clave que permiten realizar operaciones sobre
+       datos y variables. Sirven para realizar una amplia variedad de tareas, desde operaciones
+        aritméticas simples hasta comparaciones y asignaciones de valores.</p>
+    <section id="operadores-aritmeticos">
+        <h3>Operadores Aritméticos en Python</h3>
+        <p>Estos operadores se utilizan
+             para realizar operaciones matemáticas básicas.</p>
+        <table>
+            <tr>
+                <th>Operador</th>
+                <th>Descripción</th>
+                <th>Ejemplo</th>
+                <th>Resultado</th>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>Suma</td>
+                <td>2 + 3</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>Resta</td>
+                <td>5 - 2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>Multiplicación</td>
+                <td>3 * 4</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>División</td>
+                <td>10 / 3</td>
+                <td>3.3333...</td>
+            </tr>
+            <tr>
+                <td>//</td>
+                <td>División entera</td>
+                <td>10 // 3</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>Módulo</td>
+                <td>10 % 3</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>**</td>
+                <td>Potencia</td>
+                <td>2 ** 3</td>
+                <td>8</td>
+            </tr>
+        </table>
+    </section>
+        
+    <section id="operadores-logicos">
+        <h3>Operadores Lógicos en Python</h3>
+        <p>Estos operadores se utilizan para combinar expresiones 
+            lógicas y producir un resultado basado en la verdad o falsedad de esas expresiones. Estos 
+            operadores son útiles para tomar decisiones basadas en múltiples condiciones.</p>
+        <table>
+            <tr>
+                <th>Operador</th>
+                <th>Descripción</th>
+                <th>Ejemplo</th>
+                <th>Resultado</th>
+            </tr>
+            <tr>
+                <td>and</td>
+                <td>AND lógico</td>
+                <td>True and False</td>
+                <td>False</td>
+            </tr>
+            <tr>
+                <td>or</td>
+                <td>OR lógico</td>
+                <td>True or False</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td>not</td>
+                <td>NOT lógico</td>
+                <td>not True</td>
+                <td>False</td>
+            </tr>
+        </table>
+    </section>
+        
+    <section id="operadores-comparacion">
+        <h3>Operadores de Comparación en Python</h3>
+        <p>También conocidos como operadores relacionales,
+            estos operadores se utilizan para comparar dos valores. Estos operadores devuelven valores
+             booleanos (True o False) que indican si la comparación es verdadera o falsa.</p>
+        <table>
+            <tr>
+                <th>Operador</th>
+                <th>Descripción</th>
+                <th>Ejemplo</th>
+                <th>Resultado</th>
+            </tr>
+            <tr>
+                <td>==</td>
+                <td>Igual a</td>
+                <td>5 == 5</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td>!=</td>
+                <td>Diferente de</td>
+                <td>5 != 5</td>
+                <td>False</td>
+            </tr>
+            <tr>
+                <td>&lt;</td>
+                <td>Menor que</td>
+                <td>5 &lt; 10</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td>&gt;</td>
+                <td>Mayor que</td>
+                <td>10 &gt; 5</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td>&lt;=</td>
+                <td>Menor o igual que</td>
+                <td>5 &lt;= 5</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td>&gt;=</td>
+                <td>Mayor o igual que</td>
+                <td>5 &gt;= 5</td>
+                <td>True</td>
+            </tr>
+        </table>
+    </section>
+        
+    <section id="operadores-asignacion">
+        <h3>Operadores de Asignación en Python</h3>
+        <p>Estos operadores se utilizan para asignar valores
+            a variables. Además del operador de asignación básico, Python 
+            también tiene operadores de asignación compuestos que realizan 
+            una operación aritmética y luego asignan el resultado a la variable.</p>
+        <table>
+            <tr>
+                <th>Operador</th>
+                <th>Descripción</th>
+                <th>Ejemplo</th>
+                <th>Resultado</th>
+            </tr>
+            <tr>
+                <td>=</td>
+                <td>Asignación</td>
+                <td>x = 5</td>
+                <td>x es igual a 5</td>
+            </tr>
+            <tr>
+                <td>+=</td>
+                <td>Suma y asignación</td>
+                <td>x += 3</td>
+                <td>x es igual a x + 3</td>
+            </tr>
+            <tr>
+                <td>-=</td>
+                <td>Resta y asignación</td>
+                <td>x -= 3</td>
+                <td>x es igual a x - 3</td>
+            </tr>
+            <tr>
+                <td>*=</td>
+                <td>Multiplicación y asignación</td>
+                <td>x *= 3</td>
+                <td>x es igual a x * 3</td>
+            </tr>
+            <tr>
+                <td>/=</td>
+                <td>División y asignación</td>
+                <td>x /= 3</td>
+                <td>x es igual a x / 3</td>
+            </tr>
+            <tr>
+                <td>//=</td>
+                <td>División entera y asignación</td>
+                <td>x //= 3</td>
+                <td>x es igual a x // 3</td>
+            </tr>
+            <tr>
+                <td>%=</td>
+                <td>Módulo y asignación</td>
+                <td>x %= 3</td>
+                <td>x es igual a x % 3</td>
+            </tr>
+            <tr>
+                <td>**=</td>
+                <td>Potencia y asignación</td>
+                <td>x **= 3</td>
+                <td>x es igual a x ** 3</td>
+            </tr>
+        </table>
+    </section>
+</section>
+        
+</main>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/png" href="C:\Users\Daniel\OneDrive\Escritorio\Codigo\Html\ia\fotos\simbolo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solución Ejercicio 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Solución Ejercicio 3</h1>
+        <nav>
+            <ul>
+                <li><a href="ejercicios.html">Volver</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Palíndromo</h2>
+            <p>A continuación se muestra la solución al ejercicio de determinar si una cadena de texto es un palíndromo:</p>
+            <pre><code class="python">def es_palindromo(cadena):
+    cadena = cadena.lower().replace(" ", "")
+    return cadena == cadena[::-1]
+
+texto = input("Ingrese una cadena de texto: ")
+if es_palindromo(texto):
+    print("La cadena es un palíndromo.")
+else:
+    print("La cadena no es un palíndromo.")
+</code></pre>
+        </section>
+    </main>
+</body>
+</html>

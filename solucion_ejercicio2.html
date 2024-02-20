@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/png" href="C:\Users\Daniel\OneDrive\Escritorio\Codigo\Html\ia\fotos\simbolo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solución Ejercicio 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Solución Ejercicio 2</h1>
+        <nav>
+            <ul>
+                <li><a href="ejercicios.html">Volver</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Factorial</h2>
+            <p>A continuación se muestra la solución al ejercicio de cálculo del factorial:</p>
+            <pre><code class="python">def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+numero = int(input("Ingrese un número entero positivo: "))
+print("El factorial de", numero, "es:", factorial(numero))
+</code></pre>
+        </section>
+    </main>
+</body>
+</html>

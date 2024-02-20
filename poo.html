@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/png" href="C:\Users\Daniel\OneDrive\Escritorio\Codigo\Html\ia\fotos\simbolo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases y Funciones en Python</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="conceptos_basicos.html">Conceptos basicos</a></li>
+                <li><a href="ejercicios.html">Ejercicios</a></li>
+            </ul>
+        </nav>
+        <h1>Clases y Funciones en Python</h1>
+        <nav>
+            <ul>
+                <li><a href="#funciones">Funciones</a></li>
+                <li><a href="#poo">Programación Orientada a Objetos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="funciones">
+            <h2>Funciones en Python</h2>
+            <p>Una función es un bloque de código reutilizable que realiza una tarea específica. Se define utilizando la palabra clave <code>def</code>. Aquí hay un ejemplo básico:</p>
+            <pre><code class="python">def suma(a, b):
+    return a + b
+
+resultado = suma(3, 5)
+print(resultado)  # Output: 8
+</code></pre>
+
+            <h3>Parámetros y Argumentos</h3>
+            <p>Los parámetros son variables que se utilizan para pasar información a una función, mientras que los argumentos son los valores reales que se pasan a la función al llamarla. Python permite definir funciones con parámetros posicionales, parámetros con valores predeterminados, y parámetros de longitud variable. Aquí hay un ejemplo:</p>
+            <pre><code class="python">def saludar(nombre, mensaje="Hola"):
+    print(f"{mensaje}, {nombre}!")
+
+saludar("Juan")  # Output: Hola, Juan!
+saludar("María", "Buenos días")  # Output: Buenos días, María!
+</code></pre>
+
+            <h3>Funciones Anónimas (Lambda)</h3>
+            <p>En Python, las funciones anónimas (lambda) son funciones pequeñas y anónimas que pueden tener cualquier número de argumentos pero solo pueden tener una expresión. Se definen utilizando la palabra clave <code>lambda</code>. Aquí hay un ejemplo:</p>
+            <pre><code class="python">doble = lambda x: x * 2
+print(doble(5))  # Output: 10
+</code></pre>
+
+            <h3>Funciones Recursivas</h3>
+            <p>Una función recursiva es una función que se llama a sí misma para resolver un problema. Es importante tener en cuenta el caso base para evitar que la función entre en un bucle infinito. Aquí hay un ejemplo de una función recursiva para calcular el factorial de un número:</p>
+            <pre><code class="python">def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(5))  # Output: 120
+</code></pre>
+
+            <h3>Funciones de Orden Superior</h3>
+            <p>En Python, las funciones son ciudadanos de primera clase, lo que significa que pueden ser tratadas como cualquier otra variable. Esto permite pasar funciones como argumentos a otras funciones, y devolver funciones desde otras funciones. Aquí hay un ejemplo:</p>
+            <pre><code class="python">def aplicar_funcion(func, lista):
+    return [func(x) for x in lista]
+
+cuadrado = lambda x: x ** 2
+numeros = [1, 2, 3, 4, 5]
+print(aplicar_funcion(cuadrado, numeros))  # Output: [1, 4, 9, 16, 25]
+</code></pre>
+        </section>
+<section id="poo">
+    <h2>Programación Orientada a Objetos en Python</h2>
+    <p>La programación orientada a objetos (POO) es un paradigma de programación que utiliza "objetos" para modelar datos y comportamientos. En Python, todo es un objeto, lo que significa que cada entidad en el programa tiene sus propios atributos (datos) y métodos (funciones).</p>
+
+    <h3>Clases y Objetos</h3>
+    <p>Una clase es una plantilla para crear objetos, y un objeto es una instancia de una clase. Las clases definen las propiedades (atributos) y los comportamientos (métodos) de los objetos. Aquí hay un ejemplo básico:</p>
+    <pre><code class="python">class Persona:
+def __init__(self, nombre, edad):
+self.nombre = nombre
+self.edad = edad
+
+def saludar(self):
+print(f"Hola, mi nombre es {self.nombre} y tengo {self.edad} años.")
+
+# Crear un objeto de la clase Persona
+persona1 = Persona("Juan", 25)
+persona1.saludar()  # Output: Hola, mi nombre es Juan y tengo 25 años.
+</code></pre>
+
+    <h3>Herencia</h3>
+    <p>La herencia es un concepto clave en la POO que permite a una clase (llamada clase derivada o subclase) heredar atributos y métodos de otra clase (llamada clase base o superclase). Esto permite la reutilización de código y la creación de jerarquías de clases. Aquí hay un ejemplo:</p>
+    <pre><code class="python">class Empleado(Persona):
+def __init__(self, nombre, edad, salario):
+super().__init__(nombre, edad)
+self.salario = salario
+
+def mostrar_salario(self):
+print(f"Mi salario es {self.salario}")
+
+# Crear un objeto de la clase Empleado
+empleado1 = Empleado("Ana", 30, 50000)
+empleado1.saludar()  # Output: Hola, mi nombre es Ana y tengo 30 años.
+empleado1.mostrar_salario()  # Output: Mi salario es 50000
+</code></pre>
+
+    <h3>Encapsulación, Polimorfismo y Abstracción</h3>
+    <p>Además de la herencia, la POO se basa en otros tres conceptos principales:</p>
+    <ul>
+        <li><strong>Encapsulación:</strong> El ocultamiento de los detalles de implementación de un objeto dentro de su clase.</li>
+        <li><strong>Polimorfismo:</strong> La capacidad de los objetos de una misma clase para responder de manera diferente a los mismos mensajes.</li>
+        <li><strong>Abstracción:</strong> La simplificación de un problema modelando solo los aspectos importantes y ignorando los detalles innecesarios.</li>
+    </ul>
+
+    <h3>Métodos Especiales</h3>
+    <p>En Python, los métodos especiales (también conocidos como métodos mágicos o dunder methods) permiten definir comportamientos específicos para objetos, como la inicialización (<code>__init__()</code>), la representación (<code>__str__()</code>), la suma (<code>__add__()</code>), entre otros.</p>
+    <pre><code class="python">class Punto:
+def __init__(self, x, y):
+self.x = x
+self.y = y
+
+def __str__(self):
+return f"({self.x}, {self.y})"
+
+def __add__(self, other):
+return Punto(self.x + other.x, self.y + other.y)
+
+# Crear objetos de la clase Punto
+punto1 = Punto(1, 2)
+punto2 = Punto(3, 4)
+print(punto1 + punto2)  # Output: (4, 6)
+</code></pre>
+</section>
+</main>
+            
+    </main>
+</body>
+</html>

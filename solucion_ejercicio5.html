@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/png" href="C:\Users\Daniel\OneDrive\Escritorio\Codigo\Html\ia\fotos\simbolo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solución Ejercicio 5</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Solución Ejercicio 5</h1>
+        <nav>
+            <ul>
+                <li><a href="ejercicios.html">Volver</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Cálculo de Fibonacci</h2>
+            <p>A continuación se muestra la solución al ejercicio de cálculo de la secuencia de Fibonacci:</p>
+            <pre><code class="python">def fibonacci(n):
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [0]
+    elif n == 2:
+        return [0, 1]
+    else:
+        fib = [0, 1]
+        while len(fib) < n:
+            fib.append(fib[-1] + fib[-2])
+        return fib
+
+numero = int(input("Ingrese un número entero positivo: "))
+print("Secuencia de Fibonacci hasta", numero, ":")
+print(fibonacci(numero))
+</code></pre>
+        </section>
+    </main>
+</body>
+</html>
